@@ -1,0 +1,728 @@
+/* ===========================================
+   Global Styles For Index Page
+=========================================== */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  
+}
+
+/* Sections avec effet de fondu */
+.fade-section {
+  opacity: 1;
+  transition: opacity 1s ease-out; /* Transition de fondu */
+}
+
+.fade-section.hidden {
+  opacity: 0; /* Devenir transparent */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Plus haut que tout autre élément */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: #333;
+}
+
+.navbar .container {
+  max-width: 100%; /* Étend la largeur du conteneur sur toute la page */
+  padding-left: 2rem; /* Augmente l'espace à gauche */
+  padding-right: 2rem; /* Augmente l'espace à droite */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.separator {
+  border-right: 2px solid #f8f9fa;
+}
+
+.social-icons i {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===========================================
+   Hero Section
+=========================================== */
+
+.hero {
+  height: 750px;
+  position: relative;
+  background-color: #f5f8fa;
+  overflow: hidden;
+}
+
+.hero .carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Les images remplissent sans déformation */
+}
+
+.hero .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  border-radius: 10px;
+}
+
+.hero-left-content {
+  z-index: 5; /* Assure la visibilité au-dessus du carousel */
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(-50px); /* Déplace légèrement vers la gauche */
+  transition: opacity 1s ease, transform 1s ease; /* Transition fluide */
+}
+
+/* Classe pour afficher la div */
+.hero-left-content.show {
+  opacity: 1;
+  transform: translateX(0); /* Retourne à la position initiale */
+}
+
+.video-thumbnail {
+  width: 120px; /* Taille réduite de la miniature */
+  margin: 0 auto;
+}
+
+.video-thumbnail img {
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.play-icon {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.position-absolute.bg-light {
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Positionnement sur la droite */
+.slide-content {
+  top: 50%;
+  right: 10%; /* Déplace le contenu à droite */
+  transform: translateY(-50%);
+  text-align: right; /* Aligne le texte à droite */
+  max-width: 500px;
+  z-index: 2;
+}
+
+.slide-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.slide-description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #007bff;
+  border: none;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 0.8s ease-in-out; /* Ajustez la durée et la fluidité ici */
+}
+
+.carousel-indicators button.active {
+  background-color: #0056b3;
+}
+
+/* ===========================================
+   Top Videos Section
+=========================================== */
+
+.topvideos .video-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.topvideos .video-card img {
+  border-radius: 15px;
+}
+
+.topvideos .play-icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  display: none;
+}
+
+.topvideos .video-card:hover .play-icon {
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* ===========================================
+   Articles Section
+=========================================== */
+
+.articles-section {
+  background-color: #f8f9fa;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre portée plus marquée */
+}
+
+.card-img-top {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover; /* Assure que l'image garde un bon ratio */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  margin: 10px 0;
+  border-top: 2px solid;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===========================================
+   Support Section
+=========================================== */
+
+.support-us-section {
+  background-color: #e8f5e9; /* Vert clair doux */
+  color: #333; /* Texte neutre pour la lisibilité */
+}
+
+.support-us-section .container {
+  background-color: #ffffff; /* Fond blanc propre pour le conteneur */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.support-us-section h2 {
+  color: #28a745; /* Vert vif pour un appel à l’action positif */
+}
+
+.support-us-section p {
+  color: #666; /* Texte secondaire */
+}
+
+.support-us-section .btn-success {
+  background-color: #28a745; /* Bouton vert vif */
+  border: none;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.support-us-section .btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Mise en avant au survol */
+}
+
+.support-us-section .btn-outline-success {
+  border: 2px solid #28a745;
+  color: #28a745;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.support-us-section .btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.support-us-section img {
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* ===========================================
+   Events Section
+=========================================== */
+
+.date-container {
+  display: inline-block;
+  line-height: 1.2;
+  color: #007bff; /* Couleur principale pour les dates */
+}
+
+.date-number {
+  font-size: 2rem; /* Taille plus grande pour le chiffre */
+  font-weight: bold;
+}
+
+.date-label {
+  font-size: 1rem; /* Taille plus petite pour le jour et le mois */
+  text-transform: capitalize; /* Garde la première lettre en majuscule */
+}
+
+.events-calendar-section .separator {
+  display: inline-block;
+  border-left: 2px solid #007bff; /* Barre de séparation */
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.year-container {
+  display: inline-block;
+  line-height: 1; /* Réduit l'espacement vertical */
+  color: #007bff;
+}
+
+.year-part {
+  font-size: 1.8rem; /* Taille similaire au chiffre des dates */
+  font-weight: bold;
+}
+
+/* ===========================================
+   Footer Section
+=========================================== */
+
+.footer {
+  background-color: #212529; /* Fond sombre */
+  color: #adb5bd; /* Texte gris clair */
+  font-size: 0.9rem;
+}
+
+.footer h4,
+.footer h5 {
+  color: #ffffff; /* Titres blancs */
+}
+
+.footer a {
+  color: #adb5bd; /* Liens gris clair */
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff; /* Liens en bleu clair au survol */
+}
+
+.footer .btn-primary {
+  background-color: #007bff; /* Bleu pour le bouton */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* ===========================================
+   Global Styles For Education Page
+=========================================== */
+    /* Section Événement de la semaine */
+    .top-banner {
+      background: url('https://via.placeholder.com/1920x400') no-repeat center center;
+      background-size: cover;
+      margin-top: 200px;
+      height: 500px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .top-banner .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Le Saviez-vous */
+    .did-you-know {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      margin: 0 auto;
+      max-width: 900px;
+      border-left: 5px solid #007bff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bibliothèque et Test */
+    .library-test {
+      display: flex;
+      background-color: #edf7f3;
+      padding: 20px;
+      gap: 2rem;
+    }
+    .virtual-library {
+      flex: 1;
+    }
+    .virtual-library .search-bar {
+      margin-bottom: 1.5rem;
+    }
+    .virtual-library ul {
+      list-style: none;
+      padding: 0;
+    }
+    .virtual-library li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .virtual-library li img {
+      width: 50px;
+      height: 70px;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+    .knowledge-test {
+      flex: 1.5;
+      background-color: #e9ecef;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .knowledge-test img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    .knowledge-test .btn {
+      border-radius: 50px;
+    }
+    .test-meta {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    /* Je rattrape mes cours */
+    .catch-up-section {
+      background-color: #fdf2f8; /* Rose clair */
+      padding: 2rem;
+    }
+
+    .catch-up-section .filters {
+      margin-bottom: 2rem;
+    }
+    .catch-up-section .video-card img {
+      border-radius: 10px;
+    }
+    .catch-up-section .video-card {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .catch-up-section .video-card:hover {
+      transform: scale(1.05);
+    }
+    .catch-up-section .share-buttons {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+    }
+    .catch-up-section .share-buttons .btn {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+  
+  /* ===========================================
+   Global Styles For Divertissement Page
+=========================================== */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Top Banner */
+.top-banner {
+  background: url('https://via.placeholder.com/1920x400') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.top-banner .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Forum Section */
+.forum-section {
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e9f0fa;
+}
+
+.forum-post {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+}
+
+.forum-post i {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #007bff;
+}
+
+.forum-post h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.forum-post p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.forum-post .btn {
+  margin-top: 10px;
+}
+
+.forum-post .forum-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forum-meta span {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.forum-meta span i {
+  margin-right: 5px;
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.forum-section,
+.game-section,
+.tweets-section {
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.forum-section {
+  background-color: #e9f0fa;
+}
+
+.game-section {
+  background-color: #f7f2e7;
+}
+
+.tweets-section {
+  background-color: #edf7f3;
+}
+
+.forum-post {
+  margin-bottom: 1.5rem;
+}
+
+.tweets-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tweets-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.tweets-list li i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #1da1f2;
+}
+
+.scrolling-bar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  position: absolute;
+  z-index: 1000;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/** Blog **/
+/* Style général de la section blog */
+.blog-section {
+background-color: #dde3e9; /* Fond clair pour le blog */
+}
+
+/* Style pour chaque carte d'article */
+.blog-card {
+border: none;
+border-radius: 15px;
+box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+transform: translateY(-5px); /* Légère élévation au survol */
+box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15); /* Ombre portée plus marquée */
+}
+
+/* Style de l'image de l'article */
+.blog-card .card-img-top {
+border-radius: 15px 15px 0 0; /* Bords arrondis en haut */
+object-fit: cover; /* Pour garder l'image bien proportionnée */
+height: 200px;
+}
+
+/* Style du corps de la carte */
+.blog-card .card-body {
+padding: 20px;
+}
+
+/* Titre de l'article */
+.blog-card .card-title {
+font-size: 1.5rem;
+font-weight: bold;
+color: #333;
+margin-bottom: 15px;
+}
+
+/* Extrait de l'article */
+.blog-card .card-text {
+font-size: 1rem;
+color: #666;
+margin-bottom: 15px;
+}
+
+/* Bouton "Lire la suite" */
+.blog-card .btn-outline-primary {
+color: #007bff;
+border: 1px solid #007bff;
+text-transform: uppercase;
+padding: 8px 20px;
+border-radius: 30px;
+transition: all 0.3s ease;
+}
+
+.blog-card .btn-outline-primary:hover {
+background-color: #007bff;
+color: #fff;
+}
+
+/* Pagination */
+.pagination {
+display: flex;
+justify-content: center;
+}
+
+.page-item .page-link {
+color: #007bff;
+border-radius: 50px;
+padding: 8px 15px;
+transition: background-color 0.3s ease;
+}
+
+.page-item .page-link:hover {
+background-color: #007bff;
+color: #fff;
+}
